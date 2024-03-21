@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logo.ico">
+<title>ValServer's Dashboard</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #f4f4f4;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+.widget {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.widget:hover{
+    box-shadow: 0px 0px 10px black;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+    <h2>ValServer</h2>
+    <ul>
+        <li><a href="DashBoard.html">仪表盘</a></li>
+        <li><a href="index.html">退出</a></li>
+    </ul>
+</div>
+<div class="main-content">
+    <div class="widget" id="ToRule" onclick="ToURL('htmlmanager/VSrule.html')">
+        <h2>ValServer规则</h2>
+        <p>新人点进来</p>
+    </div>
+    <div class="widget" id="ToFuture" onclick="ToURL('htmlmanager/VSfuture.html')">
+        <h2>ValServer未来计划</h2>
+        <p>了解后续发展</p>
+    </div>
+    <div class="widget" id="ToGroup" onclick="ToURL('htmlmanager/VSgroup.html')">
+        <h2>ValServerQQ群</h2>
+        <p>QQ-Group-code:932666636</p>
+    </div>
+</div>
+</body>
+<script>function ToURL(URL) {
+    window.location.href = URL;
+}
+</script>
+</html>
